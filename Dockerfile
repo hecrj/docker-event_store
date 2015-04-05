@@ -16,10 +16,10 @@ RUN wget http://download.geteventstore.com/binaries/EventStore-OSS-Linux-v$ES_VE
 # Add entrypoint script
 ADD event_store.sh .
 
-VOLUME /var/opt
+VOLUME /var/opt/EventStore
 
 EXPOSE 2113
 EXPOSE 1113
 
 ENTRYPOINT ["./event_store.sh"]
-CMD ["--db=/var/opt/ESData", "--http-prefixes=http://*:2113/", "--ext-ip=0.0.0.0"]
+CMD ["--db=/var/opt/EventStore/ESData", "--http-prefixes=http://*:2113/", "--ext-ip=0.0.0.0"]
