@@ -6,7 +6,7 @@ MAINTAINER Héctor Ramón <hector0193@gmail.com>
 RUN apt-get update && apt-get install -y curl wget
 
 # Event Store version to install
-ENV ES_VERSION 3.0.1
+ENV ES_VERSION 3.0.0
 
 # Downloads Event Store
 RUN wget http://download.geteventstore.com/binaries/EventStore-OSS-Linux-v$ES_VERSION.tar.gz && \
