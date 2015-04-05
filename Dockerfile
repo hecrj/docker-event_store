@@ -1,11 +1,12 @@
-# Dockerfile for Event Store 3.0.3 on Debian
+# Dockerfile for Event Store on Debian
 FROM debian:jessie
 MAINTAINER Héctor Ramón <hector0193@gmail.com>
 
-ENV ES_VERSION 3.0.3
-
 # Install wget
 RUN apt-get update && apt-get install -y curl wget
+
+# Event Store version to install
+ENV ES_VERSION 3.0.2
 
 # Downloads Event Store
 RUN wget http://download.geteventstore.com/binaries/EventStore-OSS-Linux-v$ES_VERSION.tar.gz && \
