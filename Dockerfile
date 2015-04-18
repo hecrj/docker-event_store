@@ -23,4 +23,4 @@ EXPOSE 2113
 EXPOSE 1113
 
 ENTRYPOINT ["./event_store.sh"]
-CMD ["--mem-db", "--http-prefixes=http://*:2113/", "--ext-ip=0.0.0.0"]
+CMD ["--mem-db", "--http-prefixes=http://*:2113/", "--ext-ip=0.0.0.0", "--run-projections=all"]
